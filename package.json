@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "format": "prettier . --write",
     "test": "echo TODO",
-      "prepare": "husky"
+    "prepare": "husky"
   },
   "dependencies": {
     "react": "^19.1.0",
