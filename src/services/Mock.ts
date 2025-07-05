@@ -6,7 +6,7 @@ export const mockWeatherAtual = {
   icone: "02d",
   detalhes: {
     sensacao: 23,
-    humidade: 78,
+    umidade: 78,
     velocidadeVento: 15,
   },
 };

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Search, Wind, Droplets, Thermometer } from "lucide-react";
 import { mockPrevisao, mockWeatherAtual } from "@/services/Mock";
 import { IconeWeather } from "@/components/ui/iconeWeather";
+import { DetailRow } from "@/components/ui/detailRow";
 
 export function WeatherPage() {
   return (
@@ -48,33 +49,21 @@ export function WeatherPage() {
             <CardTitle>Detalhes</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
-            <div className="flex items-center justify-between">
-              <span className="flex items-center gap-2 text-muted-foreground">
-                <Thermometer className="size-5" />
-                Sensação
-              </span>
-              <span className="font-medium ml-2">
-                {mockWeatherAtual.detalhes.sensacao}°C
-              </span>
-            </div>
-            <div className="flex items-center justify-between">
-              <span className="flex items-center gap-2 text-muted-foreground">
-                <Droplets className="size-5" />
-                Umidade
-              </span>
-              <span className="font-medium">
-                {mockWeatherAtual.detalhes.humidade}%
-              </span>
-            </div>
-            <div className="flex items-center justify-between">
-              <span className="flex items-center gap-2 text-muted-foreground">
-                <Wind className="size-5" />
-                Vento
-              </span>
-              <span className="font-medium">
-                {mockWeatherAtual.detalhes.velocidadeVento} km/h
-              </span>
-            </div>
+            <DetailRow
+              icon={Thermometer}
+              label="Sensação"
+              value={`${mockWeatherAtual.detalhes.sensacao}°C`}
+            />
+            <DetailRow
+              icon={Droplets}
+              label="Umidade"
+              value={`${mockWeatherAtual.detalhes.umidade}%`}
+            />
+            <DetailRow
+              icon={Wind}
+              label="Vento"
+              value={`${mockWeatherAtual.detalhes.velocidadeVento} km/h`}
+            />
           </CardContent>
         </Card>
 
