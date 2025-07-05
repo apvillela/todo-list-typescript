@@ -1,10 +1,12 @@
 import "./App.css";
-import { Button } from "@/components/ui/button";
+import { WeatherPage } from "./components/pages/WeatherPage";
 
 function App() {
   return (
-    <div className="flex min-h-svh flex-col items-center justify-center">
-      <Button onClick={() => console.log("hi")}>Click me</Button>
+    <div className="">
+      <div className="bg-background text-foreground min-h-svh w-full">
+        <WeatherPage />
+      </div>
     </div>
   );
 }
