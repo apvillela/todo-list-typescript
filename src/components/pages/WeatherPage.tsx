@@ -1,59 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import {
-  Search,
-  Wind,
-  Droplets,
-  Thermometer,
-  Sun,
-  Cloud,
-  CloudRain,
-  CloudSun,
-  Zap,
-  Snowflake,
-} from "lucide-react";
-import React from "react";
-
-const mockWeatherAtual = {
-  cidade: "Florianópolis",
-  pais: "BR",
-  temp: 22,
-  descricao: "Parcialmente nublado",
-  icone: "02d",
-  detalhes: {
-    sensacao: 23,
-    humidade: 78,
-    velocidadeVento: 15,
-  },
-};
-
-const mockPrevisao = [
-  { day: "Segunda", icon: "01d", high: 28, low: 19 },
-  { day: "Terça", icon: "10d", high: 24, low: 18 },
-  { day: "Quarta", icon: "04d", high: 25, low: 20 },
-  { day: "Quinta", icon: "03d", high: 27, low: 21 },
-  { day: "Sexta", icon: "09d", high: 23, low: 17 },
-];
-
-const IconeWeather = ({
-  iconCode,
-  ...props
-}: { iconCode: string } & React.ComponentProps<typeof Sun>) => {
-  const iconMap: { [key: string]: React.ElementType } = {
-    "01": Sun,
-    "02": CloudSun,
-    "03": Cloud,
-    "04": Cloud,
-    "09": CloudRain,
-    "10": CloudRain,
-    "11": Zap,
-    "13": Snowflake,
-    "50": Wind,
-  };
-  const ComponenteIcone = iconMap[iconCode.substring(0, 2)] || Sun; // '01d' -> '01'
-  return <ComponenteIcone {...props} />;
-};
+import { Search, Wind, Droplets, Thermometer } from "lucide-react";
+import { mockPrevisao, mockWeatherAtual } from "@/services/Mock";
+import { IconeWeather } from "@/components/ui/iconeWeather";
 
 export function WeatherPage() {
   return (
