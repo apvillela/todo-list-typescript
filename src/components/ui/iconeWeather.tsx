@@ -1,32 +1,25 @@
-import {
-  Sun,
-  CloudSun,
-  Cloud,
-  CloudRain,
-  Zap,
-  Snowflake,
-  Wind,
-} from "lucide-react";
-import React from "react";
-
-const iconMap = {
-  "01": Sun,
-  "02": CloudSun,
-  "03": Cloud,
-  "04": Cloud,
-  "09": CloudRain,
-  "10": CloudRain,
-  "11": Zap,
-  "13": Snowflake,
-  "50": Wind,
-} satisfies Record<string, React.ElementType>;
-// `satisfies` vs `as`
+import { Sun } from "lucide-react";
 
 type Props = {
   iconCode: string;
-} & React.ComponentProps<typeof Sun>;
+  size?: number;
+  className?: string;
+};
 
-export function IconeWeather({ iconCode, ...props }: Props) {
-  const Icon = iconMap[iconCode.slice(0, 2)] ?? Sun;
-  return <Icon {...props} />;
+export function IconeWeather({ iconCode, size = 24, className }: Props) {
+  const isUrl = iconCode.startsWith("http") || iconCode.endsWith(".png");
+
+  if (isUrl) {
+    return (
+      <img
+        src={iconCode}
+        alt="Weather icon"
+        width={size}
+        height={size}
+        className={className}
+      />
+    );
+  }
+
+  return <Sun size={size} className={className} />;
 }
