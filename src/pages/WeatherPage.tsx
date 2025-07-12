@@ -1,16 +1,17 @@
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { DetailRow } from "@/components/ui/detailRow";
 import { IconeWeather } from "@/components/ui/iconeWeather";
 import { Input } from "@/components/ui/input";
 import { Droplets, Search, Thermometer, Wind } from "lucide-react";
-import { useEffect, useState } from "react";
 import { formatDate } from "@/utils/formatDate.util";
 import { formatDisplayDate } from "@/utils/formatDisplayDate.util";
 import { useWeather } from "@/hooks/useWeather";
 
 export function WeatherPage() {
   const [city, setCity] = useState("Limoeiro do Norte");
+  const [history, setHistory] = useState<string[]>([]);
 
   const {
     loading,
@@ -33,8 +34,19 @@ export function WeatherPage() {
     await fetchWeather(cityName, formatDate(startDate), formatDate(endDate));
   };
 
+  const updateHistory = (cityName: string) => {
+    setHistory((prev) => {
+      const filtered = prev.filter(
+        (c) => c.toLowerCase() !== cityName.toLowerCase(),
+      );
+      const updated = [cityName, ...filtered].slice(0, 5);
+      return updated;
+    });
+  };
+
   useEffect(() => {
     loadWeatherData(city);
+    updateHistory(city);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -42,6 +54,7 @@ export function WeatherPage() {
     e.preventDefault();
     if (!city) return;
     await loadWeatherData(city);
+    updateHistory(city);
   };
 
   return (
@@ -64,6 +77,27 @@ export function WeatherPage() {
           </Button>
         </form>
       </header>
+
+      {history.length > 0 && (
+        <div className="mb-6 flex flex-wrap gap-2">
+          <span className="text-sm text-muted-foreground">Recentes:</span>
+          {history.map((c) => (
+            <Button
+              key={c}
+              variant="outline"
+              size="sm"
+              className="px-3"
+              onClick={async () => {
+                setCity(c);
+                await loadWeatherData(c);
+                updateHistory(c);
+              }}
+            >
+              {c}
+            </Button>
+          ))}
+        </div>
+      )}
 
       {error && <p className="text-red-500">{error}</p>}
       {loading && <p>Carregando dados...</p>}
