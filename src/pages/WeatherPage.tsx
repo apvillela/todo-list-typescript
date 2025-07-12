@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { DetailRow } from "@/components/ui/detailRow";
 import { IconeWeather } from "@/components/ui/iconeWeather";
-import { Input } from "@/components/ui/input";
-import { Droplets, Search, Thermometer, Wind } from "lucide-react";
+import { Droplets, Thermometer, Wind } from "lucide-react";
 import { formatDate } from "@/utils/formatDate.util";
 import { formatDisplayDate } from "@/utils/formatDisplayDate.util";
 import { useWeather } from "@/hooks/useWeather";
+import { SearchForm } from "@/components/weather/SearchForm";
+import { HistoryList } from "@/components/weather/HistoryList";
 
 export function WeatherPage() {
   const [city, setCity] = useState("Limoeiro do Norte");
@@ -57,47 +57,25 @@ export function WeatherPage() {
     updateHistory(city);
   };
 
+  const handleSelectHistory = async (selectedCity: string) => {
+    setCity(selectedCity);
+    await loadWeatherData(selectedCity);
+    updateHistory(selectedCity);
+  };
+
   return (
     <div className="container mx-auto max-w-4xl p-4 sm:p-6 lg:p-8">
       <header className="mb-8 flex flex-col sm:flex-row items-center justify-between gap-4">
         <h1 className="text-3xl font-bold tracking-tight">Clima Tempo</h1>
-        <form
-          onSubmit={handleSearch}
-          className="flex w-full max-w-sm items-center space-x-2"
-        >
-          <Input
-            type="text"
-            placeholder="Buscar cidade..."
-            className="flex-1"
-            value={city}
-            onChange={(e) => setCity(e.target.value)}
-          />
-          <Button type="submit" size="icon" disabled={loading}>
-            <Search className="h-4 w-4" />
-          </Button>
-        </form>
+        <SearchForm
+          city={city}
+          setCity={setCity}
+          onSearch={handleSearch}
+          loading={loading}
+        />
       </header>
 
-      {history.length > 0 && (
-        <div className="mb-6 flex flex-wrap gap-2">
-          <span className="text-sm text-muted-foreground">Recentes:</span>
-          {history.map((c) => (
-            <Button
-              key={c}
-              variant="outline"
-              size="sm"
-              className="px-3"
-              onClick={async () => {
-                setCity(c);
-                await loadWeatherData(c);
-                updateHistory(c);
-              }}
-            >
-              {c}
-            </Button>
-          ))}
-        </div>
-      )}
+      <HistoryList history={history} onSelect={handleSelectHistory} />
 
       {error && <p className="text-red-500">{error}</p>}
       {loading && <p>Carregando dados...</p>}
