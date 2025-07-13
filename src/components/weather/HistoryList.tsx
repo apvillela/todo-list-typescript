@@ -22,7 +22,6 @@ export function HistoryList({ history, onSelect }: Props) {
       {history.map((c) => (
         <Button
           key={c}
-          variant="outline"
           size="sm"
           className={`px-3 ${
             theme === "light"

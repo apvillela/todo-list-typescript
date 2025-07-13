@@ -68,7 +68,9 @@ export function WeatherPage() {
     <div className="container mx-auto max-w-4xl p-4 sm:p-6 lg:p-8">
       <header className="mb-8 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-4">
-          <h1 className="text-3xl font-bold tracking-tight">Clima Tempo</h1>
+          <h1 className="text-3xl font-bold tracking-tight">
+            Semiotics Weather
+          </h1>
           <ThemeToggle />
         </div>
         <SearchForm

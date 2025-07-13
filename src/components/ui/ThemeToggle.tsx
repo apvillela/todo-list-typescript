@@ -12,7 +12,6 @@ export function ThemeToggle() {
   return (
     <Button
       onClick={toggleTheme}
-      variant="outline"
       className={
         theme === "light"
           ? "bg-gray-800 text-gray-200"
