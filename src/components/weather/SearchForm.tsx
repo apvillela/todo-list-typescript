@@ -1,6 +1,7 @@
 import { Search } from "lucide-react";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
+import { useTheme } from "@/contexts/ThemeContext";
 
 type Props = {
   city: string;
@@ -10,6 +11,7 @@ type Props = {
 };
 
 export function SearchForm({ city, setCity, onSearch, loading }: Props) {
+  const { theme } = useTheme();
   return (
     <form
       onSubmit={onSearch}
@@ -22,7 +24,16 @@ export function SearchForm({ city, setCity, onSearch, loading }: Props) {
         value={city}
         onChange={(e) => setCity(e.target.value)}
       />
-      <Button type="submit" size="icon" disabled={loading}>
+      <Button
+        type="submit"
+        className={`${
+          theme === "light"
+            ? "bg-gray-800 text-gray-200"
+            : "bg-gray-200 text-white"
+        }`}
+        size="icon"
+        disabled={loading}
+      >
         <Search className="h-4 w-4" />
       </Button>
     </form>
