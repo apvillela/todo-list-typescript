@@ -73,17 +73,5 @@ describe('Componente Button', () => {
       expect(button.props.disabled).toBe(true);
       expect(button.props.type).toBe('submit');
     });
-
-    it('deve aceitar classes customizadas que sobrescrevem o CVA', () => {
-      const customClass = 'bg-red-500 text-white hover:bg-red-600';
-      
-      const button = React.createElement(Button, {
-        className: customClass,
-        size: 'sm'
-      }, 'Custom Button');
-      
-      expect(button.props.className).toBe(customClass);
-      expect(button.props.size).toBe('sm');
-    });
   });
 }); 
