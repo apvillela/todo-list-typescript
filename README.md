@@ -5,12 +5,13 @@ A melhor aplicação para prever o tempo! Agora com Dark Mode
 ## Responsáveis
 
 - Alexandre Pereira Villela
-- Léo 
-- Lucas 
+- Léo
+- Lucas
 
 ## Descrição da Aplicação
 
 O Weather App é uma aplicação web que permite aos usuários:
+
 - Consultar informações meteorológicas em tempo real de qualquer cidade/local
 - Visualizar histórico meteorológico de períodos específicos
 - Acompanhar previsões do tempo
@@ -39,7 +40,7 @@ src/
 - **Framework**: React 19
 - **Linguagem**: TypeScript
 - **Build Tool**: Vite 7
-- **Estilização**: 
+- **Estilização**:
   - TailwindCSS
   - Radix UI
   - Class Variance Authority
@@ -54,10 +55,11 @@ src/
 ## 📡 Origem dos Dados
 
 A aplicação utiliza a [WeatherAPI](https://www.weatherapi.com/) como fonte de dados meteorológicos. A API fornece:
+
 - Dados meteorológicos em tempo real
 - Histórico meteorológico
 - Previsão do tempo
-- Suporte pra vários idiomas 
+- Suporte pra vários idiomas
 
 ## ✨ Funcionalidades Extras
 
@@ -77,11 +79,29 @@ A aplicação utiliza a [WeatherAPI](https://www.weatherapi.com/) como fonte de 
    - Suporte nativo a português nas informações meteorológicas
    - Interface preparada para múltiplos idiomas
 
-
 ## 🚀 Como Executar
 
-TODO
+Siga os passos abaixo para executar o projeto localmente:
 
+1. **Crie o arquivo de ambiente:**
+   - Renomeie o arquivo `.env.example` para `.env`.
+   - Abra o arquivo `.env` e adicione sua chave da API da WeatherAPI:
+     ```
+     VITE_WEATHER_API_KEY=SUA_CHAVE_API_AQUI
+     ```
+
+1. **Instale as dependências:**
+
+   ```bash
+   npm install
+   ```
+
+1. **Execute o servidor de desenvolvimento:**
+   ```bash
+   npm run dev
+   ```
+
+A aplicação estará disponível em `http://localhost:5173` (ou em outra porta, se a 5173 estiver em uso).
 
 <!--- # React + TypeScript + Vite
 
@@ -152,5 +172,3 @@ export default tseslint.config([
   },
 ]);
 ``` --->
-
-
