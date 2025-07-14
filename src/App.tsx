@@ -1,5 +1,4 @@
 import "./App.css";
-import { ThemeToggle } from "./components/ui/ThemeToggle";
 import { WeatherPage } from "@/pages/WeatherPage";
 
 function App() {
