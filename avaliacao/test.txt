@@ -1,0 +1,71 @@
+
+> trabalho-3-final-semiotics@0.0.0 test:run
+> vitest run --reporter=verbose
+
+
+ RUN  v3.2.4 /home/adriano-lima/Desenvolvimento/disciplinas/FE2/projetos/trabalho-3-final-semiotics
+
+ ✓ src/components/ui/card.test.tsx > Card Components > deve aplicar classes padrão corretamente 14ms
+ ✓ src/components/ui/card.test.tsx > Card Components > deve combinar classes personalizadas com classes padrão 1ms
+ ✓ src/components/ui/card.test.tsx > Card Components > deve aplicar classes de título corretamente 1ms
+ ✓ src/components/ui/card.test.tsx > Card Components > deve aplicar classes de descrição corretamente 0ms
+ ✓ src/components/ui/card.test.tsx > Card Components > deve aplicar classes de conteúdo corretamente 1ms
+ ✓ src/components/ui/card.test.tsx > Card Components > deve aplicar classes de rodapé corretamente 0ms
+ ✓ src/components/ui/input.test.tsx > Input Component > deve aplicar classes padrão corretamente 31ms
+ ✓ src/components/ui/input.test.tsx > Input Component > deve aplicar classes de foco corretamente 3ms
+ ✓ src/components/ui/input.test.tsx > Input Component > deve aplicar classes de erro corretamente 1ms
+ ✓ src/components/ui/input.test.tsx > Input Component > deve combinar classes personalizadas com classes padrão 1ms
+ ✓ src/components/ui/input.test.tsx > Input Component > deve aplicar classes de arquivo corretamente 1ms
+ ✓ src/components/ui/input.test.tsx > Input Component > deve aplicar classes de estado desabilitado corretamente 1ms
+ ✓ src/components/weather/SearchForm.test.tsx > SearchForm > Componente > deve ser uma função/componente 4ms
+ ✓ src/components/weather/SearchForm.test.tsx > SearchForm > Props necessárias > deve trabalhar com strings para cidade 1ms
+ ✓ src/components/weather/SearchForm.test.tsx > SearchForm > Props necessárias > deve trabalhar com valores booleanos para loading 1ms
+ ✓ src/components/weather/SearchForm.test.tsx > SearchForm > Props necessárias > deve aceitar cidade vazia 0ms
+ ✓ src/components/weather/SearchForm.test.tsx > SearchForm > Casos de uso do projeto > deve aceitar cidade padrão do projeto 0ms
+ ✓ src/components/weather/SearchForm.test.tsx > SearchForm > Casos de uso do projeto > deve trabalhar com estados de loading 0ms
+ ✓ src/utils/formatDisplayDate.util.test.ts > formatDisplayDate > deve formatar data string para DD/MM 2ms
+ ✓ src/utils/formatDisplayDate.util.test.ts > formatDisplayDate > deve adicionar zero à esquerda para dia e mês menores que 10 0ms
+ ✓ src/utils/formatDisplayDate.util.test.ts > formatDisplayDate > deve formatar último dia do ano corretamente 0ms
+ ✓ src/utils/formatDisplayDate.util.test.ts > formatDisplayDate > deve formatar primeiro dia do ano corretamente 0ms
+ ✓ src/contexts/ThemeContext.test.tsx > ThemeContext > useTheme > deve ser uma função 4ms
+ ✓ src/contexts/ThemeContext.test.tsx > ThemeContext > ThemeProvider > deve ser uma função/componente 0ms
+ ✓ src/contexts/ThemeContext.test.tsx > ThemeContext > Tipos de tema > deve trabalhar com temas light e dark 1ms
+ ✓ src/components/ui/detailRow.test.tsx > DetailRow Component > deve aceitar props corretas 3ms
+ ✓ src/components/ui/detailRow.test.tsx > DetailRow Component > deve aceitar componente de ícone como prop 0ms
+ ✓ src/components/ui/detailRow.test.tsx > DetailRow Component > deve aceitar string como label 0ms
+ ✓ src/components/ui/detailRow.test.tsx > DetailRow Component > deve aceitar ReactNode como value 0ms
+ ✓ src/components/ui/detailRow.test.tsx > DetailRow Component > deve aceitar value como número 5ms
+ ✓ src/components/ui/detailRow.test.tsx > DetailRow Component > deve ter todas as props obrigatórias 1ms
+ ✓ src/components/ui/button.test.tsx > Componente Button > buttonVariants > deve gerar classes corretas para tamanhos usados no projeto 12ms
+ ✓ src/components/ui/button.test.tsx > Componente Button > buttonVariants > deve incluir classes base obrigatórias 1ms
+ ✓ src/components/ui/button.test.tsx > Componente Button > Button Component - Casos reais de uso > deve funcionar como botão de submit (SearchForm) 9ms
+ ✓ src/components/ui/button.test.tsx > Componente Button > Button Component - Casos reais de uso > deve funcionar como botão de histórico (HistoryList) 1ms
+ ✓ src/components/ui/button.test.tsx > Componente Button > Button Component - Casos reais de uso > deve funcionar como toggle de tema (ThemeToggle) 1ms
+ ✓ src/components/ui/button.test.tsx > Componente Button > Button Component - Casos reais de uso > deve estar desabilitado quando loading (SearchForm) 1ms
+ ✓ src/utils/formatDate.util.test.ts > formatDate > deve formatar data corretamente para YYYY-MM-DD 5ms
+ ✓ src/utils/formatDate.util.test.ts > formatDate > deve adicionar zero à esquerda para mês e dia menores que 10 0ms
+ ✓ src/utils/formatDate.util.test.ts > formatDate > deve formatar data de dezembro corretamente 0ms
+ ✓ src/utils/formatDate.util.test.ts > formatDate > deve formatar primeiro dia do ano corretamente 0ms
+ ✓ src/components/weather/HistoryList.test.tsx > HistoryList > Componente > deve ser uma função/componente 2ms
+ ✓ src/components/weather/HistoryList.test.tsx > HistoryList > Props necessárias > deve aceitar array de strings para history 2ms
+ ✓ src/components/weather/HistoryList.test.tsx > HistoryList > Props necessárias > deve aceitar array vazio 1ms
+ ✓ src/components/weather/HistoryList.test.tsx > HistoryList > Props necessárias > deve trabalhar com limite de 5 cidades 0ms
+ ✓ src/components/weather/HistoryList.test.tsx > HistoryList > Casos de uso do projeto > deve aceitar cidade padrão do projeto 0ms
+ ✓ src/components/ui/iconeWeather.test.tsx > IconeWeather Component > deve detectar URL que começa com http 2ms
+ ✓ src/components/ui/iconeWeather.test.tsx > IconeWeather Component > deve detectar URL que termina com .png 0ms
+ ✓ src/components/ui/iconeWeather.test.tsx > IconeWeather Component > deve retornar false para código de ícone simples 0ms
+ ✓ src/components/ui/iconeWeather.test.tsx > IconeWeather Component > deve usar tamanho padrão quando não especificado 0ms
+ ✓ src/components/ui/iconeWeather.test.tsx > IconeWeather Component > deve aceitar tamanho personalizado 0ms
+ ✓ src/components/ui/iconeWeather.test.tsx > IconeWeather Component > deve aceitar className opcional 0ms
+ ✓ src/components/ui/ThemeToggle.test.tsx > ThemeToggle Component > deve alternar de light para dark 2ms
+ ✓ src/components/ui/ThemeToggle.test.tsx > ThemeToggle Component > deve alternar de dark para light 0ms
+ ✓ src/components/ui/ThemeToggle.test.tsx > ThemeToggle Component > deve retornar classes corretas para tema light 0ms
+ ✓ src/components/ui/ThemeToggle.test.tsx > ThemeToggle Component > deve retornar classes corretas para tema dark 0ms
+ ✓ src/components/ui/ThemeToggle.test.tsx > ThemeToggle Component > deve mostrar ícone Sun no tema light 0ms
+ ✓ src/components/ui/ThemeToggle.test.tsx > ThemeToggle Component > deve mostrar ícone Moon no tema dark 0ms
+
+ Test Files  11 passed (11)
+      Tests  58 passed (58)
+   Start at  15:25:34
+   Duration  2.20s (transform 348ms, setup 0ms, collect 1.28s, tests 144ms, environment 4ms, prepare 1.77s)
+

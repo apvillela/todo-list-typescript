@@ -1,0 +1,4 @@
+
+> trabalho-3-final-semiotics@0.0.0 lint
+> eslint .
+

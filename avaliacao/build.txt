@@ -1,0 +1,13 @@
+
+> trabalho-3-final-semiotics@0.0.0 build
+> tsc -b && vite build
+
+vite v7.0.0 building for production...
+transforming...
+✓ 1717 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.47 kB │ gzip:  0.30 kB
+dist/assets/index-CHb0_kkV.css   24.44 kB │ gzip:  5.54 kB
+dist/assets/index-DE2Y_G0d.js   263.71 kB │ gzip: 86.46 kB
+✓ built in 2.30s

@@ -1,0 +1,53 @@
+
+> trabalho-3-final-semiotics@0.0.0 format
+> prettier . --write
+
+.github/workflows/entrega.yml 26ms (unchanged)
+.prettierrc 48ms (unchanged)
+avaliacao/avaliacao-semiotics.md 85ms (unchanged)
+components.json 9ms (unchanged)
+eslint.config.js 21ms (unchanged)
+index.html 43ms (unchanged)
+package-lock.json 137ms (unchanged)
+package.json 2ms (unchanged)
+README.md 31ms (unchanged)
+src/api/weather.ts 118ms (unchanged)
+src/App.css 48ms (unchanged)
+src/App.tsx 12ms (unchanged)
+src/components/ui/button.test.tsx 40ms
+src/components/ui/button.tsx 25ms (unchanged)
+src/components/ui/card.test.tsx 23ms
+src/components/ui/card.tsx 33ms (unchanged)
+src/components/ui/detailRow.test.tsx 18ms
+src/components/ui/detailRow.tsx 7ms (unchanged)
+src/components/ui/iconeWeather.test.tsx 13ms
+src/components/ui/iconeWeather.tsx 10ms (unchanged)
+src/components/ui/input.test.tsx 21ms
+src/components/ui/input.tsx 4ms (unchanged)
+src/components/ui/ThemeToggle.test.tsx 26ms
+src/components/ui/ThemeToggle.tsx 6ms (unchanged)
+src/components/weather/HistoryList.test.tsx 11ms
+src/components/weather/HistoryList.tsx 8ms (unchanged)
+src/components/weather/SearchForm.test.tsx 10ms
+src/components/weather/SearchForm.tsx 6ms (unchanged)
+src/contexts/ThemeContext.test.tsx 5ms
+src/contexts/ThemeContext.tsx 9ms
+src/hooks/useWeather.ts 8ms (unchanged)
+src/hooks/useWeatherHistory.ts 11ms (unchanged)
+src/index.css 41ms (unchanged)
+src/lib/utils.ts 3ms (unchanged)
+src/main.tsx 5ms (unchanged)
+src/pages/WeatherPage.tsx 29ms (unchanged)
+src/services/Mock.ts 8ms (unchanged)
+src/types/weatherHistory.ts 16ms (unchanged)
+src/types/WeatherResponse.ts 10ms (unchanged)
+src/utils/formatDate.util.test.ts 6ms (unchanged)
+src/utils/formatDate.util.ts 3ms (unchanged)
+src/utils/formatDisplayDate.util.test.ts 6ms (unchanged)
+src/utils/formatDisplayDate.util.ts 4ms (unchanged)
+src/vite-env.d.ts 3ms (unchanged)
+tailwind.config.ts 3ms (unchanged)
+tsconfig.app.json 23ms (unchanged)
+tsconfig.json 2ms (unchanged)
+tsconfig.node.json 6ms (unchanged)
+vite.config.ts 10ms (unchanged)
