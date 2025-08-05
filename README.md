@@ -1,6 +1,6 @@
 # Semiotics Weather App
 
-A melhor aplicação para prever o tempo! Agora com Dark Mode
+A melhor aplicação para prever o tempo! Agora com Dark Mode e Sob desenvolvimento 
 
 ## Responsáveis
 
